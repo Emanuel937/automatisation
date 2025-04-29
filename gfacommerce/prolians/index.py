@@ -110,7 +110,9 @@ def init(brands, pageIndex):
             categories = [category.text for category in categories_soup.select('.item.category')]
             categories = categories[1:] if len(categories) > 1 else categories
         categories = ",".join(categories) if categories else "Non trouvé"
+        
 
+        print("categories is:", categories)
         data = {
             'produitID': produitID,
             'name': name,

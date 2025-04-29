@@ -4,8 +4,8 @@ from playwright.sync_api import sync_playwright
 class PlaywrightFetcher:
     def __init__(self):
         self.playwright = sync_playwright().start()
-        self.browser = self.playwright.firefox.launch(headless=True)  # Firefox en mode headless
-        self.context = self.browser.new_context()
+        self.browser    = self.playwright.firefox.launch(headless=True)  # Firefox en mode headless
+        self.context    = self.browser.new_context()
 
     def fetch_html(self, url, css_selector):
         try:
